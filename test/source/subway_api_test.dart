@@ -7,7 +7,7 @@ import 'package:seoul_subway/data/source/subway_api_impl.dart';
 void main() {
   test('지하철 도착 정보는 잘 들어와야 된다', () async {
     final mockClient = MockClient((request) async {
-      if (request.url.toString() == 'http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/영등포') {
+      if (request.url.toString() == 'http://swopenapi.seoul.go.kr/api/subway/sample/json/realtimeStationArrival/0/5/%EC%98%81%EB%93%B1%ED%8F%AC') {
         return Response(fakeSubwayData, 200);
       }
       return Response('error', 404);
